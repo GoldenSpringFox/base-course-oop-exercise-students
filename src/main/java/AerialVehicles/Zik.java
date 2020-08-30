@@ -5,6 +5,6 @@ import Missions.IntelligenceMission;
 import Missions.Mission;
 import Missions.MissionTypeException;
 
-public class Zik extends UAV {
+public class Zik extends Hermes {
 
 }

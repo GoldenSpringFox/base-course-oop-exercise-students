@@ -4,6 +4,6 @@ import Missions.BdaMission;
 import Missions.Mission;
 import Missions.MissionTypeException;
 
-public class Shoval extends UAV {
+public class Shoval extends Haron {
 }
 

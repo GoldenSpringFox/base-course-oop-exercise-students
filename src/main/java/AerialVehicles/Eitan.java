@@ -5,5 +5,5 @@ import Missions.IntelligenceMission;
 import Missions.Mission;
 import Missions.MissionTypeException;
 
-public class Eitan{
+public class Eitan extends UAV {
 }

@@ -1,3 +1,5 @@
+package NirTests;
+
 import AerialVehicles.UAVs.Haron.Eitan;
 import AerialVehicles.UAVs.Haron.Shoval;
 import Entities.Coordinates;

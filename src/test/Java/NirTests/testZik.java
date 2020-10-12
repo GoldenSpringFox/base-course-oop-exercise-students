@@ -1,3 +1,5 @@
+package NirTests;
+
 import AerialVehicles.FighterJets.F16;
 import AerialVehicles.UAVs.Haron.Shoval;
 import AerialVehicles.UAVs.Hermes.Zik;

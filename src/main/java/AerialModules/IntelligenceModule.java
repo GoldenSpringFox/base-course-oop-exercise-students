@@ -4,15 +4,9 @@ import Entities.CameraType;
 
 public class IntelligenceModule extends Module {
     private CameraType camera;
-    private final String moduleName;
 
-    public IntelligenceModule() {
-        this.moduleName = "intelligence";
-    }
-
-    @Override
-    public String getModuleType() {
-        return moduleName;
+    public IntelligenceModule(CameraType camera) {
+        this.camera = camera;
     }
 
     public CameraType getCamera() {

@@ -4,15 +4,9 @@ import Entities.SensorType;
 
 public class BdaModule extends Module {
     private SensorType sensor;
-    private final String moduleName;
 
-    public BdaModule() {
-        this.moduleName = "bda";
-    }
-
-    @Override
-    public String getModuleType() {
-        return moduleName;
+    public BdaModule(SensorType sensor) {
+        this.sensor = sensor;
     }
 
     public SensorType getSensor() {

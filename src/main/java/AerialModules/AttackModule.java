@@ -9,16 +9,10 @@ import java.util.HashMap;
 public class AttackModule extends Module {
     private int numberOfMissiles;
     private MissileType missile;
-    private final String moduleName;
 
-    public AttackModule() {
-        this.numberOfMissiles = 0;
-        moduleName = "attack";
-    }
-
-    @Override
-    public String getModuleType() {
-        return moduleName;
+    public AttackModule(int numberOfMissiles, MissileType missile) {
+        this.numberOfMissiles = numberOfMissiles;
+        this.missile = missile;
     }
 
     public int getNumberOfMissiles() {

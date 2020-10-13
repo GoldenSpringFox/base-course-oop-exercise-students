@@ -1,24 +1,21 @@
 package AerialVehicles;
 
-import AerialModules.BdaModule;
 import AerialModules.Module;
 import Entities.Coordinates;
 import Tools.Printer;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 
 public abstract class AerialVehicle {
     private int hoursOfFlightSinceLastRepair;
-    public enum Status {READY, NOT_READY, AIRBORNE}
-    private Status status;
+    private boolean readyToFly;
     private final HashMap<Class<? extends Module>, Module> modules;
 
     public AerialVehicle(List<Class<? extends Module>> possibleModules) {
         this.hoursOfFlightSinceLastRepair = 0;
-        this.status = Status.READY;
+        this.readyToFly = true;
         this.modules = declarePossibleModules(possibleModules);
     }
 
@@ -29,11 +26,11 @@ public abstract class AerialVehicle {
         this.hoursOfFlightSinceLastRepair = hoursOfFlightSinceLastRepair;
     }
     protected abstract int getHoursOfFlightBeforeHasToBeRepaired();
-    public Status getStatus() {
-        return status;
+    public boolean getReadyToFly() {
+        return readyToFly;
     }
-    public void setStatus(Status status) {
-        this.status = status;
+    public void setReadyToFly(boolean readyToFly) {
+        this.readyToFly = readyToFly;
     }
 
     private HashMap<Class<? extends Module>, Module> declarePossibleModules (List<Class<? extends Module>> possibleModules) {
@@ -54,7 +51,9 @@ public abstract class AerialVehicle {
         modules.replace(moduleType, null);
     }
 
-    public Module getModule (Class<? extends Module> moduleType) {
+    public Module getModule (Class<? extends Module> moduleType){
+        if (!modules.containsKey(moduleType))
+            return null;
         return modules.get(moduleType);
     }
 
@@ -67,12 +66,13 @@ public abstract class AerialVehicle {
     }
 
     protected void repair() {
-        setStatus(Status.READY);
+        setReadyToFly(true);
         setHoursOfFlightSinceLastRepair(0);
     }
 
     public void check() {
         if (getHoursOfFlightSinceLastRepair() > getHoursOfFlightBeforeHasToBeRepaired())
+            setReadyToFly(false);
             repair();
     }
 }

@@ -1,12 +1,13 @@
 package AerialModules;
 
+import AerialModules.Module;
+import Entities.MissileType;
 import Missions.Mission;
 
 import java.util.HashMap;
 
 public class AttackModule extends Module {
     private int numberOfMissiles;
-    public enum MissileType {LIGHT_HAIL, HEAVY_HAIL}
     private MissileType missile;
     private final String moduleName;
 

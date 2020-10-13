@@ -1,7 +1,8 @@
 package AerialModules;
 
+import Entities.CameraType;
+
 public class IntelligenceModule extends Module {
-    public enum CameraType {INFRARED, NIGHT_VISION, REGULAR}
     private CameraType camera;
     private final String moduleName;
 

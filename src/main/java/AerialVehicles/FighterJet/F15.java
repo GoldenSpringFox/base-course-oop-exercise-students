@@ -2,7 +2,6 @@ package AerialVehicles.FighterJet;
 
 import AerialModules.AttackModule;
 import AerialModules.IntelligenceModule;
-import AerialVehicles.FighterJet.FighterJet;
 
 import java.util.Arrays;
 

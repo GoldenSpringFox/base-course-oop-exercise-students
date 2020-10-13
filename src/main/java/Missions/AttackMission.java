@@ -8,8 +8,8 @@ public class AttackMission extends Mission {
     private String target;
     private final AttackModule attackModule;
 
-    public AttackMission(String target, Coordinates coordinates, AerialVehicle aerialVehicle, String pilot) {
-        super(coordinates, aerialVehicle, pilot);
+    public AttackMission(String target, Coordinates coordinates, AerialVehicle aerialVehicle, String pilot) throws AerialVehicleNotCompatibleException {
+        super(coordinates, aerialVehicle, pilot, AttackModule.class);
         this.target = target;
         attackModule = (AttackModule) getAerialVehicle().getModule(AttackModule.class);
     }

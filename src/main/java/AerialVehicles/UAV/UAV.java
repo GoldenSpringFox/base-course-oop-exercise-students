@@ -1,6 +1,7 @@
-package AerialVehicles;
+package AerialVehicles.UAV;
 
 import AerialModules.Module;
+import AerialVehicles.AerialVehicle;
 import Entities.Coordinates;
 import Tools.Printer;
 

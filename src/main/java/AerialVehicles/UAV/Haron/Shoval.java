@@ -1,18 +1,15 @@
-package AerialVehicles;
+package AerialVehicles.UAV.Haron;
 
 import AerialModules.AttackModule;
 import AerialModules.BdaModule;
 import AerialModules.IntelligenceModule;
-import AerialModules.Module;
-import Missions.AttackMission;
-import Missions.Mission;
-import Missions.MissionTypeException;
+import AerialVehicles.UAV.Haron.Haron;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
-public class Kochav extends Hermes {
-    public Kochav() {
+public class Shoval extends Haron {
+    public Shoval() {
         super(Arrays.asList(AttackModule.class, BdaModule.class, IntelligenceModule.class));
     }
 }
+

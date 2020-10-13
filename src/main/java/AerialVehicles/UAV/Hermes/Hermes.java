@@ -1,8 +1,8 @@
-package AerialVehicles;
+package AerialVehicles.UAV.Hermes;
 
 import AerialModules.Module;
+import AerialVehicles.UAV.UAV;
 
-import java.util.HashMap;
 import java.util.List;
 
 public abstract class Hermes extends UAV {

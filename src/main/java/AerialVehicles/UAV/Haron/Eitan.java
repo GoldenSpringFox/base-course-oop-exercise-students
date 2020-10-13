@@ -1,16 +1,10 @@
-package AerialVehicles;
+package AerialVehicles.UAV.Haron;
 
 import AerialModules.AttackModule;
-import AerialModules.BdaModule;
 import AerialModules.IntelligenceModule;
-import AerialModules.Module;
-import Missions.AttackMission;
-import Missions.IntelligenceMission;
-import Missions.Mission;
-import Missions.MissionTypeException;
+import AerialVehicles.UAV.Haron.Haron;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Eitan extends Haron {
     public Eitan() {

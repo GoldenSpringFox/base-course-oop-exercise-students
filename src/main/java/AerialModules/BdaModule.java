@@ -1,7 +1,8 @@
 package AerialModules;
 
+import Entities.SensorType;
+
 public class BdaModule extends Module {
-    public enum SensorType {INFRARED, DISTANCE}
     private SensorType sensor;
     private final String moduleName;
 

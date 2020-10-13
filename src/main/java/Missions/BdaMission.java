@@ -1,6 +1,5 @@
 package Missions;
 
-import AerialModules.AttackModule;
 import AerialModules.BdaModule;
 import AerialVehicles.AerialVehicle;
 import Entities.Coordinates;
@@ -9,8 +8,8 @@ public class BdaMission extends Mission {
     private String objective;
     private final BdaModule bdaModule;
 
-    public BdaMission(Coordinates coordinates, AerialVehicle aerialVehicle, String pilot) {
-        super(coordinates, aerialVehicle, pilot);
+    public BdaMission(Coordinates coordinates, AerialVehicle aerialVehicle, String pilot) throws AerialVehicleNotCompatibleException {
+        super(coordinates, aerialVehicle, pilot, BdaModule.class);
         bdaModule = (BdaModule) aerialVehicle.getModule(BdaModule.class);
     }
 

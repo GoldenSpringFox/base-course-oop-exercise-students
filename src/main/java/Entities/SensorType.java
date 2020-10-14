@@ -1,3 +1,3 @@
 package Entities;
 
-public enum SensorType {INFRARED, DISTANCE}
+public enum SensorType {INFRARED, ELINT}

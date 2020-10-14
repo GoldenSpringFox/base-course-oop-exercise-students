@@ -58,11 +58,17 @@ public abstract class AerialVehicle {
     }
 
     public void flyTo(Coordinates destination) {
-        Printer.print("Flying to: " + destination.getLongitude() + ", " + destination.getLatitude());
+        if (this.readyToFly)
+        {
+            Printer.print("Flying to: " + destination.getLongitude() + ", " + destination.getLatitude());
+            return;
+        }
+        Printer.print("Aerial Vehicle isn't ready to fly");
     }
 
     public void land() {
         Printer.print("Landing");
+        this.check();
     }
 
     protected void repair() {

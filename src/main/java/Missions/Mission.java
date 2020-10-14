@@ -52,9 +52,18 @@ public abstract class Mission{
         this.pilot = pilot;
     }
 
-    public void begin() {Printer.print("Beginning Mission!");}
-    public void cancel() {Printer.print("Abort Mission!");}
-    public void finish() {Printer.print("Finish Mission!");}
+    public void begin() {
+        this.aerialVehicle.flyTo(this.coordinates);
+        Printer.print("Beginning Mission!");
+    }
+    public void cancel() {
+        this.aerialVehicle.land();
+        Printer.print("Abort Mission!");
+    }
+    public void finish() {
+        this.aerialVehicle.land();
+        Printer.print("Finish Mission!");
+    }
 
     public abstract String getMissionDescription();
 }

@@ -1,19 +1,20 @@
 package AerialModules;
 
-import Entities.SensorType;
+        import Entities.CameraType;
 
 public class BdaModule extends Module {
-    private SensorType sensor;
+    private CameraType camera;
 
-    public BdaModule(SensorType sensor) {
-        this.sensor = sensor;
+    public BdaModule(CameraType camera) {
+        this.camera = camera;
     }
 
-    public SensorType getSensor() {
-        return sensor;
+    public CameraType getCamera() {
+        return camera;
     }
 
-    public void setSensor(SensorType sensor) {
-        this.sensor = sensor;
+    public void setCamera(CameraType camera) {
+        this.camera = camera;
     }
 }
+

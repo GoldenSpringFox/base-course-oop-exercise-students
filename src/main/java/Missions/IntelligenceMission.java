@@ -24,6 +24,6 @@ public class IntelligenceMission extends Mission {
 
     public String getMissionDescription() {
         return getPilot() + ": " + getAerialVehicle().getClass().getSimpleName() + " Collecting Data in " +
-                getRegion() + " with: " + intelligenceModule.getCamera();
+                getRegion() + " with: " + intelligenceModule.getSensor();
     }
 }

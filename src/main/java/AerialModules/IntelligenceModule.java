@@ -1,19 +1,19 @@
 package AerialModules;
 
-import Entities.CameraType;
+import Entities.SensorType;
 
 public class IntelligenceModule extends Module {
-    private CameraType camera;
+    private SensorType sensor;
 
-    public IntelligenceModule(CameraType camera) {
-        this.camera = camera;
+    public IntelligenceModule(SensorType sensor) {
+        this.sensor = sensor;
     }
 
-    public CameraType getCamera() {
-        return camera;
+    public SensorType getSensor() {
+        return sensor;
     }
 
-    public void setCamera(CameraType camera) {
-        this.camera = camera;
+    public void setSensor(SensorType sensor) {
+        this.sensor = sensor;
     }
 }

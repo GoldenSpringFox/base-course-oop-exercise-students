@@ -4,10 +4,6 @@ import AerialModules.Module;
 import AerialVehicles.AerialVehicle;
 import Entities.Coordinates;
 import Tools.Printer;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
-import java.util.HashMap;
-import java.util.List;
 
 public abstract class Mission{
     private Coordinates coordinates;

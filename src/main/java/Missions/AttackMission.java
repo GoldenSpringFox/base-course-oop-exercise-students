@@ -20,6 +20,6 @@ public class AttackMission extends Mission {
 
     public String getMissionDescription() {
         return getPilot() + ": " + getAerialVehicle().getClass().getSimpleName() + " Attacking " + getTarget() +
-                " with: " + attackModule.getMissileType() + "X" + attackModule.getMissileType();
+                " with: " + attackModule.getMissileType() + "X" + attackModule.getNumberOfMissiles();
     }
 }

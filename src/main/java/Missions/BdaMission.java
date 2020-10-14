@@ -27,6 +27,6 @@ public class BdaMission extends Mission {
 
     public String getMissionDescription() {
         return getPilot() + ": " + getAerialVehicle().getClass().getSimpleName() + " Taking pictures of " +
-                getObjective() + " with: " + bdaModule.getSensor();
+                getObjective() + " with: " + bdaModule.getCamera();
     }
 }
